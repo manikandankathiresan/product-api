@@ -1,0 +1,48 @@
+GET http://localhost:8000/
+
+### Get all products
+GET http://localhost:8000/products
+
+### Get  products with given id
+GET http://localhost:8000/products/62e00cd8239678bbe0e6b5c6
+ 
+### create a new product
+POST http://localhost:8000/products
+Content-Type: application/json
+ {
+    "name": "iPhone 11",
+    "prize": "55000"
+}
+
+### update product using id
+PATCH http://localhost:8000/products/62e1729956ca0542872327c7
+Content-Type: application/json
+{
+    "prize": "50000"
+}
+
+###  Delete a product using id
+DELETE http://localhost:8000/products/62decf9f093f13b56797af23
+
+### Error
+GET http://localhost:8000/abc_xyz
+
+
+### Query params
+GET http://localhost:8000/test?name=iMac&prise=499
+
+### Route params
+GET http://localhost:8000/test/10110/iMacPro
+
+### Post using req.body (application/json)
+POST http://localhost:8000/test
+Content-Type: application/json
+
+{
+    "name": "iMac Pro",
+    "prize": "4999"
+}
+
+###
+GET http://localhost:8000/abc_xyz
+ 
